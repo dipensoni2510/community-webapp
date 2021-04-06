@@ -17,6 +17,7 @@ class MaintainanceServiceController extends Controller
 
         if ($request->expectsJson()) {
             return DataTables::of(MaintainanceService::query())
+                ->addIndexColumn()
                 ->addColumn('actions',  function ($maintainanceService) {
                     return
                         "<a href='/maintainance-services/{$maintainanceService->id}' type='button' data-toggle='tooltip' data-placement='top' title='View' class='pl-0 pr-0 pt-0 pb-0 btn btn-icon btn-icon rounded-circle btn-flat-primary'><i

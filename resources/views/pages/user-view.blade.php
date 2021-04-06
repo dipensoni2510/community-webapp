@@ -68,7 +68,7 @@ var fun = $('#usersTable').DataTable({
         },   
          ajax: "{{route('userdashboard')}}",
          columns: [
-            { data: 'id' },
+            { data: 'DT_RowIndex', name: 'DT_Row_Index' , orderable: false, searchable: false },
             { data: 'first_name' },
             { data: 'last_name' },
             { data: 'email' },

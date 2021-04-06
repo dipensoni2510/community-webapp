@@ -18,6 +18,7 @@ class PaymentController extends Controller
 
         if ($request->expectsJson()) {
             return DataTables::of(Payment::with('user')->get())
+                ->addIndexColumn()
                 ->addColumn('tenant_name', function ($payment) {
                     return $payment->user->first_name . ' ' . $payment->user->last_name;
                 })

@@ -68,9 +68,7 @@
       'processing': '<i class="fa fa-spinner" style="color: #7367f0;"></i>'
     },
     ajax: "{{route('companies')}}",
-    columns: [{
-        data: 'id'
-      },
+    columns: [{data: 'DT_RowIndex', name: 'DT_Row_Index' , orderable: false, searchable: false},
       {
         data: 'name',
         sWidth: '15%'

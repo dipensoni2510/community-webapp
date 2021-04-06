@@ -20,6 +20,7 @@ class RentController extends Controller
         //dd($pay->payment);
         if ($request->expectsJson()) {
             return DataTables::of(User::with('payment')->get()->find(auth()->user()->id)->payment)
+                ->addIndexColumn()
                 ->addColumn('total', function ($payment) {
                     return $payment->monthly_rent + $payment->monthly_maintainance_rent;
                 })

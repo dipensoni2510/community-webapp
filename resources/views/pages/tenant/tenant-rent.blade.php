@@ -71,7 +71,7 @@ var fun = $('#paymentTable').DataTable({
         },   
          ajax: "{{route('rents')}}",
          columns: [
-            { data: 'id' },
+          {data: 'DT_RowIndex', name: 'DT_RowIndex'},
             { data: 'start_date', sWidth: '10%'},
             { data: 'end_date' },
             { data: 'monthly_rent' },

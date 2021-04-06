@@ -21,6 +21,7 @@ class MaintainanceProviderController extends Controller
         //dd(MaintainanceProvider::with('maintainance_service')->get()->find(3)->maintainance_service);
         if ($request->expectsJson()) {
             return DataTables::of(MaintainanceProvider::with('maintainance_service')->get())
+                ->addIndexColumn()
                 ->addColumn('service_type', function ($maintainanceProvider) {
                     return $maintainanceProvider->maintainance_service->title;
                 })

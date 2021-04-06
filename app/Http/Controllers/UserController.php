@@ -19,6 +19,7 @@ class UserController extends Controller
 
         if ($request->expectsJson()) {
             return DataTables::of(User::query()->where('role', 'tenant'))
+                ->addIndexColumn()
                 ->addColumn('actions',  function ($user) {
                     return $user->status === 'pending'
                         ?

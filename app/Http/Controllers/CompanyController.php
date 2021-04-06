@@ -19,17 +19,17 @@ class CompanyController extends Controller
             ['link' => route('home'), 'name' => "Home"], ['name' => "Company List"]
         ];
 
-        if ($request->expectsJson())
-        {
+        if ($request->expectsJson()) {
             return DataTables::of(Company::query())
-            ->addColumn('actions',  function ($company) {
-                return
-                    "<a href='/companies/{$company->id}' type='button' data-toggle='tooltip' data-placement='top' title='View' class='pl-0 pr-0 pt-0 pb-0 btn btn-icon btn-icon rounded-circle btn-flat-primary'><i
+                ->addIndexColumn()
+                ->addColumn('actions',  function ($company) {
+                    return
+                        "<a href='/companies/{$company->id}' type='button' data-toggle='tooltip' data-placement='top' title='View' class='pl-0 pr-0 pt-0 pb-0 btn btn-icon btn-icon rounded-circle btn-flat-primary'><i
                  class='feather icon-eye'></i></a>
 
                  <a href='/companies/{$company->id}/edit' type='button' data-toggle='tooltip' data-placement='top' title='Edit' class='pl-0 pr-0 pt-0 pb-0 btn btn-icon btn-icon rounded-circle btn-flat-warning'><i
                  class='feather icon-edit'></i></a>";
-            })->rawColumns(['actions'])->toJson();
+                })->rawColumns(['actions'])->toJson();
         }
 
         return view('pages.company.companies-view', ['breadcrumbs' => $breadcrumbs]);

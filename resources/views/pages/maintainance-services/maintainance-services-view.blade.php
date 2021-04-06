@@ -65,7 +65,7 @@
     },
     ajax: "{{route('maintainance-services')}}",
     columns: [{
-        data: 'id'
+      data: 'DT_RowIndex', name: 'DT_Row_Index' , orderable: false, searchable: false
       },
       {
         data: 'title'

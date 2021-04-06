@@ -5,13 +5,20 @@
 @section('page-style')
         {{-- Page Css files --}}
         <link rel="stylesheet" href="{{ asset(mix('css/pages/authentication.css')) }}">
+        <style>
+            .has-icon-left .form-control-position i {
+              position: relative;
+              left: 5px;
+              color: rgba(34, 41, 47, 0.4);
+            }
+          </style>
 @endsection
 @section('content')
 <section class="row flexbox-container">
   <div class="col-xl-7 col-10 d-flex justify-content-center">
       <div class="card bg-authentication rounded-0 mb-0 w-100">
           <div class="row m-0">
-              <div class="col-lg-6 d-lg-block d-none text-center align-self-center p-0">
+              <div class="col-lg-6 d-lg-block d-none text-center align-self-center px-1 py-0">
                   <img src="{{ asset('images/pages/reset-password.png') }}" alt="branding logo">
               </div>
               <div class="col-lg-6 col-12 p-0">
