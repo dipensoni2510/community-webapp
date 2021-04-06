@@ -113,6 +113,8 @@ Route::middleware('auth')->group(function () {
   Route::get('rents', 'RentController@index')->name('rents');
   Route::get('rents/{rent}/edit', 'RentController@edit');
   Route::put('rents/{rent}', 'RentController@update');
+
+  Route::get('/faqs', 'FaqController@index')->name('faqs');
   // Route::get('maintainance-services/create', 'MaintainanceServiceController@create')->name('company.create');
   // Route::get('maintainance-services/{maintainanceService}', 'MaintainanceServiceController@show');
   // //Route::get('companies.getAll', 'CompanyController@getCompanies')->name('companies.get');

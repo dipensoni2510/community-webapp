@@ -71,6 +71,18 @@
             "name": "Payment",
             "slug": "payments",
             "icon": "fa fa-money"
+        },
+        {
+            "url": "announcements",
+            "name": "Announcement",
+            "slug": "announcements",
+            "icon": "fa fa-bullhorn"
+        },
+        {
+            "url": "faqs",
+            "name": "FAQ's",
+            "slug": "faqs",
+            "icon": "fa fa-question-circle"
         }
     ]
 }
