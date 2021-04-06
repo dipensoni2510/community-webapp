@@ -1,0 +1,70 @@
+{
+    "adminmenu": [
+        {
+            "url": "home",
+            "name": "Dashboard",
+            "slug": "dashboard",
+            "badge": "2",
+            "badgeClass": "badge badge-warning badge-pill float-right",
+            "icon": "feather icon-home"
+        },
+        {
+            "url": "user-dashboard",
+            "name": "Tenant",
+            "slug": "user-dashboard",
+            "icon": "feather icon-user"
+        },
+        {
+            "url": "companies",
+            "name": "Company",
+            "slug": "companies",
+            "icon": "feather icon-globe"
+        },
+        {
+            "url": "maintainance-services",
+            "name": "Maintainance Service",
+            "slug": "services",
+            "icon": "feather icon-layers"
+        },
+        {
+            "url": "maintainance-providers",
+            "name": "Maintainance Provider",
+            "slug": "service providers",
+            "icon": "feather icon-users"
+        },
+        {
+            "url": "payments",
+            "name": "Payment",
+            "slug": "payments",
+            "icon": "feather icon-pocket"
+        }
+    ],
+    "tenantmenu": [
+        {
+            "url": "home",
+            "name": "Dashboard",
+            "slug": "dashboard",
+            "badge": "2",
+            "badgeClass": "badge badge-warning badge-pill float-right",
+            "icon": "feather icon-home"
+        },
+        {
+            "url": "near-by-shops",
+            "name": "Near by Shop",
+            "slug": "near-by-shops",
+            "icon": "feather icon-shopping-cart"
+        },
+        {
+            "url": "near-by-serviceproviders",
+            "name": "Near by Service Provider",
+            "slug": "near-by-serviceproviders",
+            "icon": "feather icon-briefcase"
+        },
+        {
+            "url": "rents",
+            "name": "Payment",
+            "slug": "payments",
+            "icon": "fa fa-money"
+        }
+    ]
+}
