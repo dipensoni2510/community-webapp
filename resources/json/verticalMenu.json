@@ -37,6 +37,12 @@
             "name": "Payment",
             "slug": "payments",
             "icon": "feather icon-pocket"
+        },
+        {
+            "url": "announcements",
+            "name": "Announcement",
+            "slug": "announcements",
+            "icon": "fa fa-bullhorn"
         }
     ],
     "tenantmenu": [

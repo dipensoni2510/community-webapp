@@ -98,6 +98,15 @@ Route::middleware('auth')->group(function () {
   Route::put('payments/{payment}', 'PaymentController@update');
   Route::delete('payments/{payment}', 'PaymentController@destroy');
 
+  //Announcements/Event Module Routes
+  Route::get('/announcements', 'AnnouncementController@index')->name('announcements');
+  Route::get('/announcements/create', 'AnnouncementController@create')->name('announcements.create');
+  Route::get('/announcements/{announcement}', 'AnnouncementController@show');
+  Route::post('/announcements', 'AnnouncementController@store')->name('announcements.store');
+  Route::get('/announcements/{announcement}/edit', 'AnnouncementController@edit');
+  Route::put('/announcements/{announcement}', 'AnnouncementController@update');
+  Route::delete('/announcements/{announcement}', 'AnnouncementController@destroy');
+
   //Tenant Used Routes 
   Route::get('near-by-shops', 'NearByShopController@index')->name('near-by-shops');
   Route::get('near-by-serviceproviders', 'NearByMaintainanceServiceProviderController@index')->name('near-by-serviceproviders');
