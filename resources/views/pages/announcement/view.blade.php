@@ -20,9 +20,11 @@
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <div class="card-header">
-          <a href="/announcements/create" class="btn btn-primary">Add Announcement</a>
-        </div>
+        @if (auth()->user()->role === "admin")
+          <div class="card-header">
+            <a href="/announcements/create" class="btn btn-primary">Add Announcement</a>
+          </div>
+        @endif
         <div class="card-content">
           <div class="card-body card-dashboard">
             <div class="table-responsive">

@@ -18,7 +18,7 @@ class AnnouncementController extends Controller
             return DataTables::of(Announcement::query())
                 ->addIndexColumn()
                 ->addColumn('actions',  function ($announcement) {
-                    return
+                    return auth()->user()->role === "admin" ?
                         "<a href='/announcements/{$announcement->id}' type='button' data-toggle='tooltip' data-placement='top' title='View' class='pl-0 pr-0 pt-0 pb-0 btn btn-icon btn-icon rounded-circle btn-flat-primary'><i
                         class='feather icon-eye'></i></a>
 
@@ -26,7 +26,10 @@ class AnnouncementController extends Controller
                  class='feather icon-edit'></i></a>
                  
                  <a href='#' data-id='{$announcement->id}' type='button' data-toggle='tooltip' data-placement='top' title='Remove Service' class='pl-0 pr-0 pt-0 pb-0 button-remove-service btn btn-icon btn-icon rounded-circle btn-flat-danger'><i
-                 class='feather icon-trash-2'></i></a>";
+                 class='feather icon-trash-2'></i></a>"
+                        :
+                        "<a href='/announcements/{$announcement->id}' type='button' data-toggle='tooltip' data-placement='top' title='View' class='pl-0 pr-0 pt-0 pb-0 btn btn-icon btn-icon rounded-circle btn-flat-primary'><i
+                 class='feather icon-eye'></i></a>";
                 })->rawColumns(['actions'])->toJson();
         }
 
