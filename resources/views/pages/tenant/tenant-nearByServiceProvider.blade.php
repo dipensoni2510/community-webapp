@@ -73,13 +73,15 @@
       },
       {
         data: 'name',
-        sWidth: '15%'
+        sWidth: '25%'
       },
       {
-        data: 'website'
+        data: 'website',
+        sWidth: '10%'
       },
       {
-        data: 'description'
+        data: 'description',
+        sWidth: '25%'
       },
       {
         data: 'phone'
